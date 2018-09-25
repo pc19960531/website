@@ -1,0 +1,25 @@
+{
+  "name": "www",
+  "version": "1.0.0",
+  "description": "pc website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pc19960531/website.git"
+  },
+  "keywords": [
+    "website"
+  ],
+  "author": "pc19960531",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pc19960531/website/issues"
+  },
+  "homepage": "https://github.com/pc19960531/website#readme",
+  "dependencies": {
+    "react": "^16.5.2"
+  }
+}
