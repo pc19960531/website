@@ -9,7 +9,6 @@
     <meta name="keywords" content="官网,论坛,pc,PC,博客">
     <meta name="description" content="pc的测试网站，未来将作为博客使用">
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src='https://webapi.amap.com/maps?v=1.3&plugin=AMap.Geolocation,AMap.ToolBar,AMap.Geocoder,AMap.PlaceSearch,AMap.Autocomplete,AMap.Driving&key=9f269b1ccef5945ffe7a603d1ae00f70'></script>
     <!-- <script src="https://cdn.bootcss.com/moment.js/2.22.1/locale/af.js"></script> -->
    <style>
         .location{
@@ -131,92 +130,6 @@
         </div>
     </div>
 </body>
-<!-- <script>
-    $(function () {
-        $.ajax({
-            type: "GET",
-            url: '/1.0/api/visit/visitInfo ',
-            // data: { ak: 'ZDHBZDICQM9VCOczCtEGyYN6xE1pdhRY' },
-            success: function (res) {
-                //alert("success:" + JSON.stringify(res))
-                // var date = moment(res.data.currentTime).format("YYYY-MM-DD HH:mm:ss");
-                // console.error(JSON.stringify(res));
-                $(".visiter_count").text(res.data.visiterCount);
-                $(".sum_times").text(res.data.sumTimes);
-                // $(".date").text(date);
-                // setInterval(function () {
-                //     var currentTime = moment(new Date()).format("YYYY-MM-DD HH:mm:ss");
-                //     $(".date").text(currentTime);
-                // }, 1000)
-            },
-            error: function (res) {
-                alert("error:" + JSON.stringify(res))
-            }
-        })
-
-        function getPositionByGaode() {
-            AMap.plugin(['AMap.Geolocation'], function () {
-                let geolocation = new AMap.Geolocation({
-                    showCircle: false, //不显示定位结果的圆
-                    showMarker: false, //不显示定位结果的标记
-                    showButton: false, //不显示组件的定位按钮
-                    timeout: 5000 //浏览器定位超时时间5s
-                });
-
-                geolocation.getCurrentPosition(function (status, result) {
-                    if (status == 'complete') {
-                        var loactionDetail = onLocateSuccess(result); //定位成功
-                        $(".longitude").text(loactionDetail.longitude);
-                        $(".latitude").text(loactionDetail.latitude);
-                        $(".province").text(loactionDetail.province);
-                        $(".city").text(loactionDetail.city);
-                        $(".district").text(loactionDetail.district);
-                        $(".township").text(loactionDetail.township);
-                        $(".street").text(loactionDetail.street);
-                        $(".streetNumber").text(loactionDetail.streetNumber);
-                        $(".building").text(loactionDetail.building);
-                    } else if (status == 'error') {
-                        //定位失败
-                        if (result.message.indexOf('Geolocation permission denied.') !== -1) {
-                            //Geolocation permission denied.表示用户禁用了浏览器或者APP的定位权限或者关闭了手机的定位服务
-                            //或者当前页面为非安全页面,Chrome或者IOS10等系统会禁用非安全页面的定位请求
-                            //如果您的页面还没有支持HTTPS请尽快升级
-                            //安全页面指的是支持HTTPS的Web站点，而且是通过https协议打开的页面。安全页面也包括本地页面
-                            // showTip('您好，请在系统的隐私设置中打开当前应用的定位权限。');
-                        } else {
-                            // showTip('无法获取精确位置,将定位您所在的城市。');
-                        }
-                    }
-                });
-
-            });
-        }
-
-        function onLocateSuccess(result) {
-            let positionObj = {};
-            positionObj.longitude = result.position.lng;
-            positionObj.latitude = result.position.lat;
-            positionObj.time = new Date().getTime();
-            positionObj.adcode = result.addressComponent.adcode;
-            positionObj.province = result.addressComponent.province;
-            positionObj.city = result.addressComponent.city;
-            positionObj.district = result.addressComponent.district;
-            positionObj.township = result.addressComponent.township;
-            positionObj.street = result.addressComponent.street;
-            positionObj.streetNumber = result.addressComponent.streetNumber;
-            positionObj.building = result.addressComponent.building;
-
-
-            // //在手机微信上用这段代码,将地址信息放入到localStorage中,缓存时间为1分钟
-            // localStorageWrap.setItem("cwechat-index:setPosition", JSON.stringify(positionObj));
-            return positionObj
-        };
-
-
-        getPositionByGaode();
-    })
-
-</script> -->
 
 
 </html>
